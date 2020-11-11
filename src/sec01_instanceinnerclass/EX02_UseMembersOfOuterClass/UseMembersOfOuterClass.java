@@ -1,12 +1,13 @@
 package sec01_instanceinnerclass.EX02_UseMembersOfOuterClass;
 
+/*이너클래스 내부에서 외부 클래스의 필드/메서드 사용*/
+
 class A {
 	int a = 3;
 	int b = 4;
 	void abc() {
 		System.out.println("A 클래스 메서드");
-	}
-	
+	}	
 	//인스턴스 이너클래스 정의
 	class B {
 		int a = 5;
@@ -27,15 +28,14 @@ class A {
 		}
 	}
 }
-
 public class UseMembersOfOuterClass {
 	public static void main(String[] args) {
 		//#1. outer class객체 생성
-		A a = new A();
+		A a = new A();		
 		
 		//#2. inner class 객체 생성
 		A.B b = a.new B();
-		b.bcd();
+		b.bcd();		
 	}
 }
 
